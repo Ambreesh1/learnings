@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #111c32;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero p {
+    color: #94a3b8;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.about {
+    background: #172338;
+    text-align: center;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #94a3b8;
+}
+
+.skills-container,
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill, .project {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill:hover, .project:hover {
+    transform: translateY(-7px);
+    background: #26374e;
+}
+
+.skill h3 {
+    color: #38bdf8;
+}
+
+.project p {
+    color: #94a3b8;
+    margin: 12px 0;
+}
+
+.contact {
+    background: #172338;
+    text-align: center;
+}
+
+.contact p {
+    color: #94a3b8;
+    margin: 10px 0 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+    background: #111c32;
+}
+
+@media(max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    section {
+        padding: 60px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Portfolio.</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p>Hello, Welcome to my Portfolio</p>
+        <h1>I'm a <span>Web Developer</span></h1>
+        <p>
+            I create modern, responsive and user-friendly
+            websites with clean design and creative ideas.
+        </p>
+        <a href="#projects" class="btn">Explore My Work</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I am a passionate developer interested in technology,
+        software development and modern web applications.
+        I enjoy learning new technologies and building
+        projects that solve real-world problems.
+    </p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills-container">
+        <div class="skill"><h3>HTML</h3></div>
+        <div class="skill"><h3>CSS</h3></div>
+        <div class="skill"><h3>JavaScript</h3></div>
+        <div class="skill"><h3>Java</h3></div>
+        <div class="skill"><h3>React</h3></div>
+        <div class="skill"><h3>Node.js</h3></div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project">
+            <h3>Project One</h3>
+            <p>A modern and responsive website design.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="project">
+            <h3>Project Two</h3>
+            <p>An innovative web application interface.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="project">
+            <h3>Project Three</h3>
+            <p>A clean and professional dashboard design.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Let's Connect</h2>
+    <p>Interested in working together? Get in touch.</p>
+    <a href="mailto:hello@example.com" class="btn">
+        Contact Me
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 My Portfolio. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
